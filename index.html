@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="index.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/jquery.mobile.custom.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/knockout-3.4.2.js"></script>
         <script src="js/main.js"></script>
@@ -34,6 +35,11 @@
                         <button class="col-1 btn btn-outline-dark btn-group-addon"><img src="/icons/check.svg" height="15" width="15" alt="icon name"></button>
                     </div>
                     <div class="form-row btn-group mb-1">
+                        <button class="col-2 btn btn-outline-dark btn-group-addon"></button>
+                        <button class="col-8 btn btn-outline-dark btn-group-addon"></button>
+                        <button class="col-1 btn btn-outline-dark btn-group-addon"><img src="/icons/info.svg" height="15" width="15" alt="icon name"></button>
+                    </div>                    
+                    <div class="form-row btn-group mb-1">
                         <button class="col-1 btn btn-outline-dark btn-group-addon"><img src="/icons/plus.svg" height="15" width="15" alt="icon name"></button>
                         <input  class="col-2 btn btn-outline-dark btn-group text-left" type="text">
                         <button class="col-1 btn btn-outline-dark btn-group-addon"><img src="/icons/minus.svg" height="15" width="15" alt="icon name"></button>
@@ -42,10 +48,16 @@
                     </div>
                 </div>
             </div>   
+            <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 
         </section>
 
-        <script>ko.applyBindings(itemsVM, document.getElementById("content-items"));</script>
+        <script>ko.applyBindings(itemsVM, document.getElementById("content-items"));
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+    </script>
       </main>
     </body>
 </html>

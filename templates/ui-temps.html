@@ -1,0 +1,55 @@
+<!-- UI Templates -->
+<div class="card mb-2">
+    <div class="card-header">Add Items</div>
+    <div class="card-body">
+        <!-- Search Form -->
+        <div class="form-row btn-group mb-1">
+            <button class="col-1 btn btn-outline-dark btn-group-addon"><img src="/icons/eye.svg" height="15" width="15" alt="icon eye"></button>
+            <button class="col-1 btn btn-outline-dark btn-group-addon"><img src="/icons/menu.svg" height="15" width="15" alt="icon menue"></button>
+            <input  class="col-9 btn btn-outline-dark btn-group text-left" type="text" placeholder="Type to search... &#x2315;">
+            <button class="col-1 btn btn-outline-dark btn-group-addon"><img src="/icons/delete.svg" height="15" width="15" alt="icon delete"></button>
+        </div>
+        <!-- Search Results -->
+        <div class="form-row btn-group mb-1">
+            <button class="col-1 btn btn-outline-dark btn-group-addon"><img src="/icons/check.svg" height="15" width="15" alt="icon name"></button>
+            <button class="col-10 btn btn-outline-dark btn-group-addon" disabled></button>
+            <button class="col-1 btn btn-outline-dark btn-group-addon" data-toggle="popover" data-trigger="focus" data-content="Popover Content, click to close."><img src="/icons/info.svg" height="15" width="15" alt="icon name"></button>
+        </div>
+        <!-- Stagged Items -->
+        <div class="form-row btn-group mb-1">
+            <button class="col-1 btn btn-outline-dark btn-group-addon"><img src="/icons/plus.svg" height="15" width="15" alt="icon name"></button>
+            <input  class="col-2 btn btn-outline-dark btn-group text-left" type="text">
+            <button class="col-1 btn btn-outline-dark btn-group-addon"><img src="/icons/minus.svg" height="15" width="15" alt="icon name"></button>
+            <button class="col-7 btn btn-outline-dark btn-group-addon" disabled></button>
+            <button class="col-1 btn btn-outline-dark btn-group-addon"><img src="/icons/x.svg" height="15" width="15" alt="icon name"></button>
+        </div>
+        <!-- Summary -->
+        <div class="form-row btn-group mb-1">
+            <button class="col-11 btn btn-outline-dark btn-group-addon" disabled>Selected Item One</button>
+            <button class="col-1 btn btn-outline-dark btn-group-addon" data-toggle="popover" data-trigger="focus" data-content="Popover Content, click to close.">
+                <img src="/icons/info.svg" height="15" width="15" alt="icon info">  
+            </button>
+        </div>                     
+        <div class="form-row btn-group mb-1">
+            <button class="col-11 btn btn-outline-dark btn-group-addon" disabled>Selected Item Two</button>
+            <button class="col-1 btn btn-outline-dark btn-group-addon" data-toggle="popover" data-trigger="focus" data-content="Popover Content, click to close.">
+                <img src="/icons/info.svg" height="15" width="15" alt="icon info">  
+            </button>
+        </div>                                         
+    </div>
+</div>
+
+<script>
+// Popover Script
+$(function () {
+    $('[data-toggle="popover"]').popover({
+        animation: false,
+        container: 'body',
+        placement: 'left'                    
+    })
+
+    $('.popover-dismiss').popover({
+        trigger: 'focus'
+    });
+});
+</script>
